@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705510468
+CharacterBody2D.gd::GDScript::-1::1705508431::0::1::::<>CharacterBody2D<>::
+node_2d.gd::GDScript::-1::1705508431::0::1::::<>Node<>::
+node_2d.tscn::PackedScene::8636976014707330929::1705510468::0::1::::<><>::res://node_2d.gd<>uid://di72a0lwxo6jo::::res://assets/lgog.png<>res://script/TileHolder.gd
+startscreen.tscn::PackedScene::2368370172272981378::1705510464::0::1::::<><>::
+::res://Assets/::1705509264
+bluetile.png::CompressedTexture2D::7284141205600084520::1705510535::1705510539::1::::<><>::
+lgog.png::CompressedTexture2D::7788473578225673244::1705508431::1705508598::1::::<><>::
+::res://script/::1705510322
+TileHolder.gd::GDScript::-1::1705510322::0::1::::<>Node2D<>::
