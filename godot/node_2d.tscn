@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvb2y6pe4lxx6"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_ylgsa"]
+[ext_resource type="Texture2D" uid="uid://di72a0lwxo6jo" path="res://Assets/lgog.png" id="2_iaue6"]
+[ext_resource type="Script" path="res://script/TileHolder.gd" id="3_fuv6s"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ylgsa")
+
+[node name="Lgog" type="Sprite2D" parent="."]
+position = Vector2(676, 324)
+scale = Vector2(1.45064, 1.49309)
+texture = ExtResource("2_iaue6")
+
+[node name="TileHolder" type="Node2D" parent="."]
+script = ExtResource("3_fuv6s")
