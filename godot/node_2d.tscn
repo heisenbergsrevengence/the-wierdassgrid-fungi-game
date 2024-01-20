@@ -7,9 +7,7 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ylgsa")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="Lgog" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Lgog" type="Sprite2D" parent="."]
 position = Vector2(676, 324)
 scale = Vector2(1.45064, 1.49309)
 texture = ExtResource("2_iaue6")
