@@ -12,17 +12,21 @@ func _ready():
 		child_array.append([])
 		for y in range(1,6):
 			child_array[x-1].append(Sprite2D.new()) # Create a new Sprite2D.
-			
 			child_array[x-1][y-1].texture = tile_tex_blue # Set texture to preloaded texture
 			child_array[x-1][y-1].position = Vector2(start_cord_x * x, start_cord_y * y)  # Set its pos
 			child_array[x-1][y-1].name = "TILE_" + str(x, "_", y)
 			child_array[x-1][y-1].scale.x = 0.02 # Set scaling so they display correctly 
 			child_array[x-1][y-1].scale.y = 0.02
-			
-			add_child(child_array[x-1][y-1]) # Add it as a child of this node
+	pass
 	
+# Add precreated nodes onot the scene
+func addChildren():
+	for i in child_array.size():
+		for j  in child_array[i].size():
+			add_child(child_array[i][j]) 
 	pass
 
+# Get vec2 of a tile in the grid using grid coords
 func getTilePos(gridX: int, gridY: int) -> Vector2:
 	return child_array[gridX][gridY].position
 
