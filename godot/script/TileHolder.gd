@@ -29,7 +29,3 @@ func addChildren():
 # Get vec2 of a tile in the grid using grid coords
 func getTilePos(gridX: int, gridY: int) -> Vector2:
 	return child_array[gridX][gridY].position
-
-# Currently unused
-func _process(delta):
-	pass
