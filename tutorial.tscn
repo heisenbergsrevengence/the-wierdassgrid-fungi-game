@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbprcvcqlao1w"]
+
+[ext_resource type="FontFile" uid="uid://cicgxaa6x0vh" path="res://Assets/UI/fonts/britannic-bold-regular_ccFVi/Britannic Bold Regular/Britannic Bold Regular.ttf" id="1_24qa1"]
+[ext_resource type="Script" path="res://tutorial.gd" id="1_qyq6y"]
+[ext_resource type="Texture2D" uid="uid://iwbj800ji05a" path="res://Assets/RedBall.png" id="3_lwdok"]
+[ext_resource type="Texture2D" uid="uid://bji88gohr2gkq" path="res://Assets/bluetile.png" id="4_voxkp"]
+[ext_resource type="Texture2D" uid="uid://dmrdmhaqbyk4d" path="res://Assets/RedTile_Green.png" id="5_8quba"]
+[ext_resource type="Texture2D" uid="uid://dedff2np52stb" path="res://Assets/bluetile - Copy.png" id="6_nudtu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qyq6y")
+
+[node name="backbutton" type="Button" parent="."]
+offset_left = 88.0
+offset_top = 568.0
+offset_right = 296.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_24qa1")
+theme_override_font_sizes/font_size = 50
+text = "<-back"
+flat = true
+
+[node name="tuttext" type="Button" parent="."]
+offset_left = 312.0
+offset_top = 280.0
+offset_right = 964.0
+offset_bottom = 390.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_24qa1")
+theme_override_font_sizes/font_size = 50
+button_mask = 3
+text = "yellow! this is the tutorial for
+ the yhe bourgousie
+"
+flat = true
+
+[node name="RedBall" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(884, 305)
+scale = Vector2(4.77586, 4.87931)
+texture = ExtResource("3_lwdok")
+
+[node name="Bluetile" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(800, 608)
+scale = Vector2(0.0372434, 0.0394418)
+texture = ExtResource("4_voxkp")
+
+[node name="RedTileGreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(664, 608)
+scale = Vector2(0.125624, 0.131)
+texture = ExtResource("5_8quba")
+
+[node name="RedTileGreen2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(800, 608)
+scale = Vector2(0.125624, 0.131)
+texture = ExtResource("5_8quba")
+
+[node name="Bluetile-Copy" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(800, 608)
+scale = Vector2(0.0338413, 0.0357194)
+texture = ExtResource("6_nudtu")
+
+[connection signal="button_up" from="backbutton" to="." method="_on_button_2_button_up"]
+[connection signal="button_down" from="tuttext" to="." method="_on_button_button_down"]

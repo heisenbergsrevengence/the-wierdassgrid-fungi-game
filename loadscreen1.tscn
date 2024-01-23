@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://do4vttgewbvxn"]
+
+[ext_resource type="Texture2D" uid="uid://o1po3p56l346" path="res://Assets/lgog.png" id="1_3e50l"]
+[ext_resource type="Script" path="res://loadscreen1.gd" id="2_rec3c"]
+
+[node name="Lgog" type="Sprite2D"]
+position = Vector2(975, 520.5)
+scale = Vector2(2.09013, 2.43548)
+texture = ExtResource("1_3e50l")
+script = ExtResource("2_rec3c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyhslskyr5ebm"]
+
+[ext_resource type="Texture2D" uid="uid://b0iy6qs44s0vk" path="res://Assets/tilestarter.png" id="1_x8n0s"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.3, 0.275862)
+
+[node name="Tilestarter" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_x8n0s")

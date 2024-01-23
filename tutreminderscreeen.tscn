@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3yy1vol78txp"]
+
+[ext_resource type="Script" path="res://tutreminderscreeen.gd" id="1_2uce6"]
+[ext_resource type="FontFile" uid="uid://cicgxaa6x0vh" path="res://Assets/UI/fonts/britannic-bold-regular_ccFVi/Britannic Bold Regular/Britannic Bold Regular.ttf" id="1_86r5r"]
+[ext_resource type="Texture2D" uid="uid://jst8eq5uwd4p" path="res://Assets/UI/tutorialbtn.png" id="2_v4kmb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2uce6")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 626.0
+offset_top = 224.0
+offset_right = 1232.0
+offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("1_86r5r")
+theme_override_font_sizes/font_size = 60
+text = "<=be sure to look at the tutorial first!"
+
+[node name="Tutorialbtn" type="Sprite2D" parent="."]
+position = Vector2(389, 335)
+scale = Vector2(0.747601, 0.64313)
+texture = ExtResource("2_v4kmb")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://cc2vcim3bmdwn"]
+
+[ext_resource type="Script" path="res://gridsystem.gd" id="1_e1xe6"]
+[ext_resource type="Texture2D" uid="uid://dv6whigfdk07t" path="res://Assets/UI/Backplate.png" id="2_ekjfw"]
+[ext_resource type="Texture2D" uid="uid://bkcyqv8us7x1s" path="res://Assets/9by5.png" id="3_688ux"]
+[ext_resource type="Script" path="res://9By5.gd" id="4_4cjoa"]
+[ext_resource type="Texture2D" uid="uid://c6i87eurvfaoo" path="res://Assets/UI/Menu_PauseFrame/ManuPlate.png" id="5_unm3p"]
+[ext_resource type="FontFile" uid="uid://cicgxaa6x0vh" path="res://Assets/UI/fonts/britannic-bold-regular_ccFVi/Britannic Bold Regular/Britannic Bold Regular.ttf" id="6_aejvb"]
+[ext_resource type="Texture2D" uid="uid://de7tewgk75jys" path="res://Assets/UI/Buttons/Box_Buttons/BoxButtonDefault.png" id="7_e76m1"]
+[ext_resource type="Script" path="res://redballbutton.gd" id="8_771in"]
+[ext_resource type="Texture2D" uid="uid://iwbj800ji05a" path="res://Assets/RedBall.png" id="9_1pvrp"]
+[ext_resource type="Texture2D" uid="uid://c3yyk6tqn1n41" path="res://Assets/UI/MenuTabs/ManuTabHover.png" id="10_lds4s"]
+[ext_resource type="PackedScene" uid="uid://cyhslskyr5ebm" path="res://playertilestarter.tscn" id="11_2hc2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7khm"]
+size = Vector2(3.02899, 7.15255e-06)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_e1xe6")
+
+[node name="Backplate" type="Sprite2D" parent="."]
+position = Vector2(964, 492)
+scale = Vector2(0.987705, 0.865435)
+texture = ExtResource("2_ekjfw")
+
+[node name="9By5" type="Sprite2D" parent="."]
+position = Vector2(768, 496)
+scale = Vector2(1.32058, 1.35103)
+texture = ExtResource("3_688ux")
+script = ExtResource("4_4cjoa")
+
+[node name="firstgridshape2d(POINTER)" type="CollisionShape2D" parent="."]
+position = Vector2(224, 224)
+scale = Vector2(1.32058, 1.35103)
+shape = SubResource("RectangleShape2D_k7khm")
+
+[node name="endturnbutt" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1696, 784)
+scale = Vector2(1.5, 2.75)
+texture = ExtResource("5_unm3p")
+
+[node name="endturnbutton" type="Button" parent="."]
+z_index = 1
+offset_left = 1616.0
+offset_top = 752.0
+offset_right = 1768.0
+offset_bottom = 816.0
+theme_override_colors/font_color = Color(0.494118, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.627451, 0, 1)
+theme_override_colors/font_hover_color = Color(0.494118, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_aejvb")
+theme_override_font_sizes/font_size = 38
+text = "endturn"
+flat = true
+
+[node name="BoxButtonDefault" type="Sprite2D" parent="."]
+position = Vector2(1688, 256)
+scale = Vector2(4.6, 3)
+texture = ExtResource("7_e76m1")
+
+[node name="redballbutton" type="Button" parent="."]
+offset_left = 1616.0
+offset_top = 224.0
+offset_right = 1848.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.494118, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.627451, 0, 1)
+theme_override_colors/font_hover_color = Color(0.494118, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_aejvb")
+theme_override_font_sizes/font_size = 36
+flat = true
+script = ExtResource("8_771in")
+
+[node name="RedBall" type="Sprite2D" parent="."]
+position = Vector2(1568, 256)
+scale = Vector2(1.87931, 1.87931)
+texture = ExtResource("9_1pvrp")
+
+[node name="ManuTabHover" type="Sprite2D" parent="."]
+position = Vector2(144, 96)
+scale = Vector2(3.8, 2)
+texture = ExtResource("10_lds4s")
+
+[node name="gametab" type="Button" parent="ManuTabHover"]
+offset_left = -35.7895
+offset_top = -16.0
+offset_right = 25.2105
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.494118, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_aejvb")
+theme_override_font_sizes/font_size = 22
+text = "game"
+flat = true
+
+[node name="statertile1" parent="." instance=ExtResource("11_2hc2h")]
+position = Vector2(216, 232)
+
+[node name="statertile1,2" parent="." instance=ExtResource("11_2hc2h")]
+position = Vector2(360, 232)
+
+[node name="statertile2,1" parent="." instance=ExtResource("11_2hc2h")]
+position = Vector2(216, 360)
+
+[connection signal="pressed" from="endturnbutton" to="." method="_on_button_pressed"]
